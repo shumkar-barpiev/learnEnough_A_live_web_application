@@ -7,3 +7,7 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 Minitest::Reporters.use!
 
+# Returns the document.
+def doc(response)
+    Nokogiri::HTML(response.body)
+end
